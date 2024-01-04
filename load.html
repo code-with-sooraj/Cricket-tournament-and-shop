@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Website</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <style>
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 2;
+            width: 500px;
+            height: 300px;
+            max-width: 90%;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .modal-content {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .modal button {
+            background-color: rgb(15, 165, 230);
+            margin: 40px 25px;
+            color: white;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .modal button:hover {
+            background-color: #0563af;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal" id="loginSignupModal">
+        <div class="modal-content">
+            <h1>Welcome to Vignan Cricket Tournament</h1>
+            <p>Please log in or sign up to explore more.</p>
+        </div>
+        <button onclick="openLoginPopup()">Login</button>
+        <button onclick="openSignupPopup()">Sign Up</button>
+    </div>
+
+    <!-- Rest of your HTML content -->
+
+    <div class="main">
+        <div class="container-1">
+            <div class="img">
+                <img src="image/vignanLogo.png" alt="not available" width="200px" height="100px">
+            </div>
+            <div class="title">
+                <h1>Cricket Website</h1>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#"><i class="fa-solid fa-house"></i> &nbsp;Home</a>
+            <a href="#"><i class="fa-solid fa-people-group"></i>&nbsp;Teams</a>
+            <a href="#"><i class="fa-solid fa-users"></i>&nbsp;Players</a>
+            <a href="#"><i class="fa-solid fa-shop"></i>&nbsp;Shop</a>
+            <a href="#"><i class="fa-solid fa-address-card"></i>&nbsp;About Us</a>
+        </nav>
+
+        <div class="container-2">
+            <div class="slideshow-container">
+
+                <div class="mySlides">
+                    <img src="image/batting.gif" alt="Slide 1">
+                </div>
+
+                <div class="mySlides">
+                    <img src="image/bowling.gif" alt="Slide 2">
+                </div>
+
+                <div class="mySlides">
+                    <img src="image/wicketkipping.gif" alt="Slide 3">
+                </div>
+
+                <div style="text-align: center;">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 Cricket Website. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="slideshow.js"></script>
+</body>
+
+<script src="slideshow.js"></script>
+<script>
+    window.onload = function () {
+        
+        document.getElementById('loginSignupModal').style.display = 'block';
+    };
+
+    function openLoginPopup() {
+            window.location.href = 'Registration_and_login/login.php';
+        }
+
+    function openSignupPopup() {
+        window.location.href = 'Registration_and_login/registration.php';
+    }
+</script>
+</body>
+
+</html>
